@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Road Home Games: Iterating the Gameplay</title>
+<meta content='The core mechanics of Net Detective are pretty simple. Task the player with solving a mystery word, then provide linguistic context to help the player' name='description'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='True' name='HandheldFriendly'>
+<meta content='320' name='MobileOptimized'>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="/images/magnifying_glass_icon.ico" rel="icon" type="image/ico" />
+<link href="/stylesheets/application.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/roadhomegames.css" rel="stylesheet" type="text/css" />
+<link href='//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400' rel='stylesheet' type='text/css'>
+</head>
+<body class='post-template tag-getting-started'>
+<main class='content' role='main'>
+<div class='net-detective-post-container'>
+<a class='net-detective-post' href='/'>
+<img alt="Blog Logo" src="/images/WebsiteBanner1.png" />
+</a>
+</div>
+<article class='post tag-getting-started'>
+<span class='post-meta'>
+<time datetime='2014-12-28'>
+28 Dec 2014
+</time>
+</span>
+<h1 class='post-title'>Iterating the Gameplay</h1>
+<section class='post-content'><p>The core mechanics of Net Detective are pretty simple. Task the player with solving a mystery word, then provide linguistic context to help the player select the correct answer from a list. I haven&rsquo;t seen a game that does this before (the verbal section of the SAT exam doesn&rsquo;t count), so all the little things that go into presenting the mechanics in an exciting, fun, and engaging manner were puzzles to me as I went about building a game around this core idea.</p>
+
+<p>How many words should be in a puzzle? How informative or mysterious should the clues be? Where should the clues come from? How many and what type of clues should the player be allowed? How do you prevent puzzles from getting boring or repetitive? Will the player even understand how the clues they are given relate to the puzzle they&rsquo;re solving?  I&rsquo;m not sure I ended up in the right place with all of the decisions I made, but let me explain how I got where I did.</p>
+
+<p>The idea for the game started when I was looking at the ads that google supplies in my email account. Allegedly, these ads relate in some way to the contents of the emails I was reading to make them more relevant to me and more likely to lead to sales for their advertisers. Sometimes the ads were actually relevant, but sometimes they were nonsense. In many ways the nonsense ones were more fun to me because their absurdity made me chuckle. And that got me thinking: if I were given a random ad like the ones I was seeing, could I work backward to the original keywords that prompted google to serve me what I was seeing?</p>
+
+<p>This seemed like a cool idea for seeding the mechanics of a mobile game. And best of all, the business plan was built right in! I would serve ads to players, and they would carefully pore over the language in the ad to figure out some mystery word related to the ad they were seeing. The experience would hopefully be fun for players, and advertisers would love it because it would get people to actually read their ads instead of skipping over them.</p>
+
+<p>I had hoped to make the game a social game, with players creating puzzles for their friends who would then solve them, but I quickly discovered how hard it was to make the puzzle-creation side of the game fun, and because of how much additional work it would take to implement the social mechanics, I dropped this feature.</p>
+
+<p>I still liked the core idea enough that I went and looked into some of the mobile advertising API&rsquo;s. Unfortunately for me, they didn&rsquo;t provide the sort of capability for serving ads based on keywords that I needed for my game. But I still liked the idea of using linguistic context to figure out words, and services like Google, Bing, and Twitter made it easy to scour the web for specific words that I could present as clues in the game. So I built the start of a game and hooked into the various API&rsquo;s to search the Web, or News, or Twitter or whatever to provide clues for the mystery words. Google was charging for web searches via their API at the time, but Bing provided a free service provided you didn&rsquo;t exceed a certain quota per month, and then they would charge tiered pricing for searches beyond that. Twitter was also very easy to hook into via their JSON API.</p>
+
+<p>The game was fun, and the randomness of the web made playing challenging and spontaneous. The puzzles I tested on were random phrases, usually 3-9 words long, and one phrase didn&rsquo;t really have anything to do with the next.</p>
+
+<p>There was no initial pre-set prompt for the phrase in these early prototypes. Instead, I did a Bing search for every word in the phrase, and presented the result as the starting clue for the phrase. I found that this phrase-clue was problematic because people had a very strong expectation that every word in the phrase to show up in the clue. In practice, this rarely happened and it confused and frustrated players. I then tried two approaches to replacing this phrase-clue. First, provide a prompt that gave context to the phrase. For example, if the phrase was &ldquo;Harry Potter&rdquo;, I might provide the prompt &ldquo;Hogwarts&rdquo;. Another approach was to give the first part of a phrase or sentence and then task them with solving the rest of it i.e. provide &ldquo;Twinkle Twinkle&hellip;&rdquo; and ask them to solve &ldquo;Little Star&rdquo;. Players understood both approaches, but I decided to universally use the second approach because it fit better with further mechanics (such as the story) I layered in later.</p>
+
+<p>I discovered that players also had an expectation for there to be some relationship between the various phrases they were solving. If one puzzle was &ldquo;Harry Potter&rdquo; and the next was &ldquo;Sucralose Artificial Sweetener&rdquo;, the jarring disconnect would pull them out of the puzzle-solving experience. I briefly toyed with ripping headlines from the front page of the day&rsquo;s papers so that puzzles would not only be related to each other, but would also be current and relevant to what was going on in the world right now. Unfortunately pulling random headlines just didn&rsquo;t make very interesting puzzles, and if people weren&rsquo;t familiar with the event or topic to which the headline was related, they just got further confused.</p>
+
+<p>My next attempt to relate puzzles was to create groups of eight or so thematically connected puzzles into categories that players could select to correctly gear player expectations for what sort of puzzles they would be solving before they starting playing them. For example, a category might be &ldquo;Oscar winning movies&rdquo;, and players would be given a movie title and then have to solve a quotation from said movie. While this helped with expectation setting, when a player started a category and then discovered that they didn&rsquo;t really like the puzzles in that category, they ended up feeling sort of obligated to finish the category once they started it and having a poor experience as a result.</p>
+
+<p>After that didn&rsquo;t pan out as I had hoped, I decided to make the major investment to create a narrative for the game.  I decided to do this to solve the puzzle-relation problem just discussed and also to provide a greater reward for solving puzzles by unlocking story as you solved the puzzles. Reward mechanics probably deserve a post of their own.</p>
+
+<p>Another design challenge I ran into was getting players to use clues. I discovered that players had the most fun with the game when they were using lots of clues and pulling in lots of weird, funny, or just plain random content from the internet. I also found that players were often very reluctant to use clues. Players had a strong belief that the &ldquo;right&rdquo; way to play the game was to use the fewest clues possible, and this belief was reducing players&rsquo; enjoyment when playing. Most of my attempts to solve this problem involved designing and tweaking the resource system associated with clues.</p>
+
+<p>Initially, the only restriction I placed on clues was that there were three clues of various types available for each word. Even though there was no penalty for using clues, players were still very reluctant to use them. Players also could not lose a puzzle. Next, I gave players a number of &ldquo;lives&rdquo; on every given puzzle, and making an incorrect guess would use a life, and using a clue would also use a life. This was too harsh a penalty for using a clue, but curiously players didn&rsquo;t use any fewer clues than they did before. Next, I created a separate &ldquo;clue power&rdquo; resource that did not use up a life, and gave a one free clue per word that would automatically be introduced at the start of each word. This increased the number of clues players saw mostly because players now automatically saw a clue at the start of a word. I wasn&rsquo;t fully satisfied with this solution, but it&rsquo;s the one I stuck with.</p>
+
+<p>Lastly, let me discuss the mechanics of winning and losing. Initially, it was impossible to lose a puzzle. You could guess completely at random if you&rsquo;d like, and eventually you&rsquo;d hit the right answer and win. I found that players naturally attempted to answer with as few incorrect guesses as possible, but players also tended to make random guesses instead of looking up additional clues. Adding a constraint on the number of incorrect guesses a player made added some tension to making a guess and significantly reduced the tendency to make random guesses. At this point in the design, if the player couldn&rsquo;t solve a puzzle before running out of hearts, they would be given the answer and moved on to the next puzzle. However, after talking to a designer I made the change to how it works now. When running out of hearts, players would be be told they could purchase more hearts or wait a certain amount of time before a heart would regenerate. The hope here was to introduce a (hopefully pleasing) degree of frustration when players made a mistake, and also to provide a sink for in-game currency.</p>
+</section>
+<footer class='post-footer'>
+<section class='author'>
+<h4>RoadHomeGames</h4>
+<p>Net Detective</p>
+</section>
+<section class='share'>
+<h4>Share this post</h4>
+<a class='icon-twitter' href='https://twitter.com/share?text=Iterating the Gameplay&amp;amp;url=http://www.example.com/2014/12/28/iterating-the-gameplay/' onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class='hidden'>Twitter</span>
+</a>
+<a class='icon-facebook' href='https://www.facebook.com/sharer/sharer.php?u=http://www.example.com/2014/12/28/iterating-the-gameplay/' onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class='hidden'>Facebook</span>
+</a>
+<a class='icon-google-plus' href='https://plus.google.com/share?url=http://www.example.com/2014/12/28/iterating-the-gameplay/' onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class='hidden'>Google+</span>
+</a>
+</section>
+</footer>
+</article>
+</main>
+
+<footer class='site-footer'>
+<a class='subscribe icon-feed' href='/feed.xml'>
+<span class='tooltip'>Subscribe!</span>
+</a>
+<div class='inner'>
+<section class='copyright'>
+All content copyright
+<a href="/">Road Home Games</a>
+&copy;
+2014
+&bull; All rights reserved.
+</section>
+<section class='poweredby'>
+Proudly published with
+<a href='http://middlemanapp.com'>Middleman</a>
+</section>
+<section class='poweredby'>
+Casper theme powered by
+<a class='icon-ghost' href='https://ghost.org'>Ghost</a>
+</section>
+</div>
+</footer>
+<script src="/javascripts/application.js" type="text/javascript"></script>
+</body>
+</html>

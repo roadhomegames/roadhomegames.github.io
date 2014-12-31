@@ -1,0 +1,36 @@
+.net-detective-logo img {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+.net-detective-post-container {
+	background: #303538;
+	padding-bottom: 5px;
+	margin-bottom: 25px;
+}
+
+.net-detective-post img {
+	display: block;
+	width: auto;
+	margin: 0 auto;
+	line-height: 0;
+}
+
+.apple-link img {
+	height: 100px;
+	margin: 0px 50px 5px 50px;
+}
+
+.google-play-link img {
+	height: 125px;
+	margin: 0px 50px 0px 50px;
+	vertical-align: bottom;
+}
+
+.caption {
+	text-align: center;
+	font-size: medium;
+	width: 100%;
+}
