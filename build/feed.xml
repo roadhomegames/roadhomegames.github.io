@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Road Home Games</title>
+  <subtitle>Home of internet detective Penny Purdue</subtitle>
+  <id>http://www.example.com</id>
+  <link href="http://www.example.com"/>
+  <link href="http://www.example.com/feed.xml" rel="self"/>
+  <updated>2014-12-28T19:00:00-05:00</updated>
+  <author>
+    <name>RoadHomeGames</name>
+  </author>
+  <entry>
+    <title>The Chapter 7 Update</title>
+    <link rel="alternate" href="http://www.example.com/2014/12/29/the-chapter-7-update/"/>
+    <id>http://www.example.com/2014/12/29/the-chapter-7-update/</id>
+    <published>2014-12-28T19:00:00-05:00</published>
+    <updated>2014-12-31T16:49:48-05:00</updated>
+    <author>
+      <name>RoadHomeGames</name>
+    </author>
+    <summary type="html">I’ve been looking forward to releasing the Chapter 7 update and it’s finally out! Along with the expected minor bug fixes and some small art and story improvements, this update includes an entirely new chapter containing 12 all new puzzles along with...</summary>
+  </entry>
+  <entry>
+    <title>Iterating the Gameplay</title>
+    <link rel="alternate" href="http://www.example.com/2014/12/28/iterating-the-gameplay/"/>
+    <id>http://www.example.com/2014/12/28/iterating-the-gameplay/</id>
+    <published>2014-12-27T19:00:00-05:00</published>
+    <updated>2014-12-31T16:49:48-05:00</updated>
+    <author>
+      <name>RoadHomeGames</name>
+    </author>
+    <summary type="html">The core mechanics of Net Detective are pretty simple. Task the player with solving a mystery word, then provide linguistic context to help the player select the correct answer from a list. I haven’t seen a game that does this before (the verbal section...</summary>
+  </entry>
+  <entry>
+    <title>Designing the Net Detective Interface</title>
+    <link rel="alternate" href="http://www.example.com/2014/12/27/designing-the-net-detective-interface/"/>
+    <id>http://www.example.com/2014/12/27/designing-the-net-detective-interface/</id>
+    <published>2014-12-26T19:00:00-05:00</published>
+    <updated>2014-12-31T16:49:48-05:00</updated>
+    <author>
+      <name>RoadHomeGames</name>
+    </author>
+    <summary type="html">I am not a graphic designer, but I had to design the interface for my game Net Detective. I don’t know of any games that play like it, so it had to be an original design. This is the story of how I arrived at what came to be the final design for the...</summary>
+  </entry>
+  <entry>
+    <title>Characters</title>
+    <link rel="alternate" href="http://www.example.com/2014/12/26/characters/"/>
+    <id>http://www.example.com/2014/12/26/characters/</id>
+    <published>2014-12-25T19:00:00-05:00</published>
+    <updated>2014-12-31T16:49:48-05:00</updated>
+    <author>
+      <name>RoadHomeGames</name>
+    </author>
+    <summary type="html">
+
+Penny
+
+
+    
+
+This is internet detective Penny Purdue. She is an expert puzzle solver and likes to help her Uncle Rutherford. When things get tough she has the habit of blowing bubbles with her bubbler pipe.
+
+
+Uncle Rutherford
+
+ Rutherford B. Rutherford...</summary>
+  </entry>
+  <entry>
+    <title>Coins</title>
+    <link rel="alternate" href="http://www.example.com/2014/12/25/coins/"/>
+    <id>http://www.example.com/2014/12/25/coins/</id>
+    <published>2014-12-24T19:00:00-05:00</published>
+    <updated>2014-12-31T16:49:48-05:00</updated>
+    <author>
+      <name>RoadHomeGames</name>
+    </author>
+    <summary type="html">
+
+When you play the game, you get coins by solving puzzles or by using the “Get More Coins” feature in the store! You can use the coins you get to purchase hearts, clue power, or upgrades in the shop.
+
+The first time you complete a puzzle, you earn...</summary>
+  </entry>
+  <entry>
+    <title>Hearts</title>
+    <link rel="alternate" href="http://www.example.com/2014/12/24/Hearts/"/>
+    <id>http://www.example.com/2014/12/24/Hearts/</id>
+    <published>2014-12-23T19:00:00-05:00</published>
+    <updated>2014-12-31T16:49:48-05:00</updated>
+    <author>
+      <name>RoadHomeGames</name>
+    </author>
+    <summary type="html">
+
+You can have a maximum of up to 5 hearts. Each time you make an incorrect guess, you lose a heart. When you run out of hearts, you can’t make any more guesses.
+
+To get more hearts, you can purchase them using your coins, or you can wait some time...</summary>
+  </entry>
+</feed>
