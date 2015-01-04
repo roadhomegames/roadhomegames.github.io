@@ -1,0 +1,12 @@
+---
+title: The Story
+date: 2014-12-21
+---
+<img class="size-medium wp-image-53" alt="Penny and Uncle Rutherford" src="/images/PennyRutherfordDiscussion.png" width="300" height="281" />
+
+Penny Purdue is an internet detective. She solves puzzles using clues from the internet. Her Uncle is an engineer and together they have invented a revolutionary new refrigerator. They believe their refrigerator can change the world, but it won't be easy as they meet interesting and unexpected friends and foes on their journey.
+
+---
+
+###### Watch the trailer!
+<iframe width="560" height="315" src="//www.youtube.com/embed/errFp7kuI0k" frameborder="0" allowfullscreen></iframe>

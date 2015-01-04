@@ -1,0 +1,9 @@
+---
+title: Hearts
+date: 2014-12-24
+---
+<a href="/images/HasHearts1.png"><br /><img class="size-medium wp-image-58" alt="Adding a heart to the collection" src="/images/HasHearts1.png" width="300" height="300" /></a>
+
+You can have a maximum of up to 5 hearts. Each time you make an incorrect guess, you lose a heart. When you run out of hearts, you can't make any more guesses.
+
+To get more hearts, you can purchase them using your coins, or you can wait some time without playing to automatically regenerate hearts. The more hearts you have, the longer it takes to regenerate the next heart.

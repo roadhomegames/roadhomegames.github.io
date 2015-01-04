@@ -1,0 +1,9 @@
+---
+title: Coins
+date: 2014-12-25
+---
+<a href="/images/PennyAccountant.png"><img class="size-medium wp-image-6" alt="This is Penny in the counting house!" src="/images/PennyAccountant.png" width="300" height="300" /></a>
+
+When you play the game, you get coins by solving puzzles or by using the "Get More Coins" feature in the store! You can use the coins you get to purchase hearts, clue power, or upgrades in the shop.
+
+The first time you complete a puzzle, you earn 5 coins plus one coin for each heart you have. You earn 2 coins if you replay a puzzle.
